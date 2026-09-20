@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <h1 align="center">⚡ LinkHub</h1>
   <h3 align="center">Advanced Short-Link & Bio-Link Hub</h3>
   <p align="center">
@@ -20,7 +20,15 @@
 
 <br />
 
-> **Note on Live Demo:** The backend API is hosted on a free Render tier, which spins down on inactivity. **It may take 30-50 seconds for the first request (login/signup) to wake up the server.**
+---
+
+## 🚀 Live Deployment
+This project is fully deployed and accessible online:
+* **Frontend (Live Demo):** [https://com-bot-linkhub.vercel.app](https://com-bot-linkhub.vercel.app)
+* **Backend API:** Hosted on Render
+* **Database:** Hosted securely on Supabase
+
+> **Note on Live Demo:** The frontend is hosted on Vercel for fast global delivery, while the FastAPI backend is hosted on a free Render instance. **It may take 30-50 seconds for the first request (login/signup) to wake up the backend server.**
 
 ---
 

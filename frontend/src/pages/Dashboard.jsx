@@ -83,7 +83,16 @@ export default function Dashboard() {
             {devicesData.length > 0 ? (
               <ResponsiveContainer width="100%" height={220}>
                 <PieChart>
-                  <Pie data={devicesData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} label={({name, percent}) => `${name} ${(percent*100).toFixed(0)}%`}>
+                  <Pie 
+                    data={devicesData} 
+                    dataKey="value" 
+                    nameKey="name" 
+                    cx="50%" 
+                    cy="50%" 
+                    outerRadius={60} 
+                    label={({name, percent}) => `${name} ${(percent*100).toFixed(0)}%`}
+                    style={{ fontSize: '12px', fill: '#94a3b8' }}
+                  >
                     {devicesData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                   </Pie>
                   <Tooltip contentStyle={{ background: '#0f172a', border: '1px solid #1e293b' }} />

@@ -90,8 +90,17 @@ export default function Dashboard() {
                     cx="50%" 
                     cy="50%" 
                     outerRadius={60} 
-                    label={({name, percent}) => `${name} ${(percent*100).toFixed(0)}%`}
-                    style={{ fontSize: '12px', fill: '#94a3b8' }}
+                    label={({ cx, cy, midAngle, innerRadius, outerRadius, value, name, percent }) => {
+                      const RADIAN = Math.PI / 180;
+                      const radius = outerRadius * 1.2;
+                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
+                      return (
+                        <text x={x} y={y} fill="#94a3b8" fontSize={11} textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+                          {`${name} ${(percent * 100).toFixed(0)}%`}
+                        </text>
+                      );
+                    }}
                   >
                     {devicesData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                   </Pie>

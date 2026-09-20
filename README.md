@@ -25,7 +25,7 @@
 ## 🚀 Live Deployment
 This project is fully deployed and accessible online:
 * **Frontend (Live Demo):** [https://com-bot-linkhub.vercel.app](https://com-bot-linkhub.vercel.app)
-* **Backend API:** Hosted on Render
+* **Backend API Docs (Swagger):** [https://com-bot-linkhub.onrender.com/docs](https://com-bot-linkhub.onrender.com/docs)
 * **Database:** Hosted securely on Supabase
 
 > **Note on Live Demo:** The frontend is hosted on Vercel for fast global delivery, while the FastAPI backend is hosted on a free Render instance. **It may take 30-50 seconds for the first request (login/signup) to wake up the backend server.**
